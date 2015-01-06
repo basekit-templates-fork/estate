@@ -1,0 +1,13 @@
+<!-- Header -->
+<header class="template-header">
+
+	<div class="container">
+		<div class="company-details">
+			{#{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}#}
+			{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+		</div>
+		{{widget('navigation', 'navigation', {"align":"right"})|raw}}
+	</div>
+
+</header>
+<!-- End Header -->

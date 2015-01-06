@@ -1,0 +1,262 @@
+// ------------------------------------
+// Beta Studio: CSS > Plugin: Ecommerce
+// ------------------------------------
+
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+// 1. #SINGLE PRODUCT
+// 2. #PRODUCT LIST
+// 3. #PRODUCT IMAGES
+// 4. #BASKET WIDGET
+// 5. #BASKET SUMMARY
+
+
+// -----------------------------
+// 1. #Single Product
+// -----------------------------
+
+// Display images and content inline
+.product-images,
+.product-content {
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+// Product Images
+// --------------
+
+.product-images {
+    width: 45%;
+    margin-right: 3%;
+    @media @tablet {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+
+// Product Content
+// ---------------
+
+.product-content {
+    width: 51%;
+    @media @tablet {
+        width: 100%;
+    }
+}
+
+// Product Details
+.product-title { font-size: bkscale(@font-swatch1-font-size,0.8); }
+.product-description { font-size: bkscale(@font-swatch5-font-size,0.9); }
+.product-price { color: @color-swatch3; }
+
+
+// Product Form
+// ------------
+
+.product__form      { 
+    margin-top: 20px;
+    background-color: transparent;
+}
+.product__form-body { margin: 0; }
+
+// Reset legend styles
+.product__legend {
+    padding: 0 0 10px;
+    background-color: transparent;
+    border: 0;
+}
+
+// Form Select
+.product__select { min-width: 150px; }
+
+// Add to Basket,
+// View Basket Buttonss
+.button--submit.product__input,
+.product__button {
+    min-width: 150px;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+// Product Tags
+.tag-item {
+    margin-right: -4px;
+}
+.tag-item:first-child:before {
+    display: none;
+}
+.tag-item:before { 
+    content: ',';
+}
+
+
+// -----------------------------
+// 2. #Product List
+// -----------------------------
+
+// Product List
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;     
+}
+
+// Product Item
+.product-item {
+    position: relative;
+    width: 32%;
+    margin-bottom: 2%;
+    // Display 100% at mobile
+    @media @mobile {
+        width: 100%;
+        margin-bottom: 4%;
+    }
+}
+
+
+// Product Filters
+// ---------------
+
+.product-listing__form-group,
+.product-listing__select {
+    @media @mobile {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+// Filtert Search Input
+.input--search.product-listing__input {
+    padding: 0;
+    font-size: 12px;
+    text-indent: 10px;
+}
+
+// Filter Submit Button
+.button--submit.product-listing__input {
+    padding: 4px 12px;
+    font-size: 16px;
+}
+
+
+
+
+// -----------------------------
+// 3. #Product Images
+// -----------------------------
+
+// Adds margin to product image div
+.product-item-image,
+.basket-item-image { 
+    margin-bottom: 20px;
+}
+
+
+
+
+// -----------------------------
+// 4. #Basket Widget
+// -----------------------------
+
+// Basket Body
+.basket-body {
+    min-width: 40%;
+    width: 50%;
+	padding: 30px;
+	background-color: darken(@color-swatch1,5%);
+    @media @tablet {
+        width: 100%;
+    }
+    @media @mobile {
+        padding: 20px;
+    }
+}
+
+// Basket Item
+.basket-item {
+	position: relative;
+	padding: 30px;
+	background-color: @bg-color;
+}
+
+// Remove BG colour on summary form
+.form.basket-summary__summary-form { background-color: transparent; }
+
+
+// Baseket Layout
+// --------------
+
+
+// Remove Item Button
+// ------------------
+
+// Position in top-right
+.item-remove {
+	position: absolute;
+    top: 30px;
+    right: 30px;
+    height: 25px;
+    width: 25px;
+    padding: 0;
+    font-size: 14px;
+}
+
+// Remove icon spacing
+.item-remove:before {
+    margin-right: 0;
+}
+
+// Hide button text
+.remove-text { 
+    display: none;
+}
+
+
+
+
+// -----------------------------
+// 5. #Basket Summary
+// -----------------------------
+
+
+// Basic Cell Settings
+// -------------------
+
+// Table Cell Heading 
+.cell--header.basket-summary__cell {
+    background-color: darken(@bg-color,2%);
+}
+
+// Table Cell
+.basket-summary__cell { 
+    border: 1px solid darken(@bg-color-alt,7%);
+}
+
+
+// Summary Table at mobile
+// -----------------------
+
+@media @mobile  {
+
+    // Remove cell border
+    .basket-summary__cell { border: 0; }
+
+    // Give odd table rows a BG colour
+    .basket-summary__table-row:nth-child(odd) {
+        background-color: darken(@bg-color,2%);
+    }
+
+    // Add border-top to 'price' and 'total' cells
+    .cell--price.basket-summary__cell,
+    .cell--total.basket-summary__cell {
+        border-top: 1px solid darken(@bg-color-alt,7%);
+    }
+
+}
+
+

@@ -1,0 +1,113 @@
+{
+    "name":"Prism",
+    "thumbnail":"thumbnail.png",
+    "screenshot":"thumbnail.png",
+    "templateType":"standard",
+    "pageTypes": ["home"],
+    "widgetVersion": 2,
+    "tags": {
+    "en": ["minimal", "clean", "floral", "modern", "creative", "typography", "simple", "contemporary", "flexible", "florist", "studio", "portfolio", "designer", "sans-serif"],
+    "es": ["minimalista", "limpio", "decorativo", "moderno", "creativo", "tipográfico", "simple", "contemporaneo", "flexible", "florista", "estudio", "portafolio", "diseñador", "sans-serif"],
+    "br": ["minimalista", "limpo", "florido", "moderno", "criativo", "tipográfico", "simples", "contemporâneo", "flexível", "florista", "estúdio", "portfolio", "designer", "sans-serif"]
+    },
+    "colorSwatches":
+    {
+        "Swatch 1": {
+            "color1":"#ffffff",
+            "color2":"#333333",
+            "color3":"#333333",
+            "color4":"#333333",
+            "color5":"#666666",
+            "color6":"#333333",
+            "color7":"#ffffff"
+        }
+    },
+    "fontSwatch": {
+       "title": "Open Sans",
+        "font1": {
+            "font-family": "\"Droid Sans\", Helvetica, Arial, sans-serif",
+            "font-size": "30px",
+            "font-weight": "600",
+            "line-height": "36px",
+            "color": "@color-swatch4",
+            "letter-spacing": "2px"
+        },
+        "font2": {
+            "font-family": "\"Droid Sans\", Helvetica, Arial, sans-serif",
+            "font-size": "24px",
+            "font-weight": "inherit",
+            "line-height": "36px",
+            "color": "@color-swatch4",
+            "letter-spacing": "2px"
+        },
+        "font3": {
+            "font-family": "\"Droid Sans\", Helvetica, Arial, sans-serif",
+            "font-size": "20px",
+            "font-weight": "inherit",
+            "line-height": "28px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font4": {
+            "font-family": "\"Droid Sans\", Helvetica, Arial, sans-serif",
+            "font-size": "17px",
+            "font-weight": "inherit",
+            "line-height": "26px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font5": {
+            "font-family": "\"Droid Sans\", Helvetica, Arial, sans-serif",
+            "font-size": "16px",
+            "font-weight": "inherit",
+            "line-height": "28px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font6": {
+            "font-family": "\"Roboto\", Geneva, \"Lucida Console\", sans-serif",
+            "font-size": "14px",
+            "font-weight": "inherit",
+            "line-height": "28px",
+            "color": "@color-swatch6",
+            "color-hover": "lighten(@color-swatch6,10%)",
+            "letter-spacing": "2px",
+            "background-color": "@color-swatch3",
+            "background-color-hover": "@color-swatch1"
+        },
+        "font7": {
+            "font-family": "\"Droid Sans\", Helvetica, Arial, sans-serif",
+            "font-size": "16px",
+            "font-weight": "inherit",
+            "line-height": "26px",
+            "color": "@color-swatch1",
+            "letter-spacing": "1px",
+            "background-color": "@color-swatch3",
+            "background-color-hover": "lighten(@color-swatch3,10%)"
+        },
+        "font8": {
+            "font-family": "\"Droid Sans\", Helvetica, Arial, sans-serif",
+            "font-size": "45px",
+            "font-weight": "800",
+            "line-height": "60px",
+            "color": "@color-swatch1",
+            "letter-spacing": "2px"
+        },
+        "font9": {
+            "font-family": "\"Droid Sans\", Helvetica, Arial, sans-serif",
+            "font-size": "24px",
+            "font-weight": "800",
+            "line-height": "36px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit"
+        },
+        "font10": {
+            "font-family": "\"Droid Sans\", Helvetica, Arial, sans-serif",
+            "font-size": "30px",
+            "font-weight": "800",
+            "line-height": "38px",
+            "color": "@color-swatch4",
+            "letter-spacing": "5px"
+        }
+    }
+}

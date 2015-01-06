@@ -1,0 +1,62 @@
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+// 1. #LESS INCLUDES
+// 2. #PAGE SETTINGS
+
+// -----------------------------
+// 1. #LESS Includes
+// -----------------------------
+
+@import "@{templateLocal}/css/reset.less"; // CSS Reset
+
+@import "@{templateCommon}/bk-less-framework.less"; // BaseKit LESS Framework
+
+// ** BaseKit LESS Framework is a set of non obtrusive LESS files that can be pulled into your template
+// to guarentee widgets come to life. Proivides default styles for all widgets. Uncomment to activate.
+
+// Template Includes
+@import "@{templateLocal}/less/theme.less"; // Theme
+@import "@{templateLocal}/less/widgets.less"; // Widgets
+@import "@{templateLocal}/less/mixins.less"; // Mixins
+@import "@{templateLocal}/less/navigation.less"; // Navigation
+
+// // Plugin Includes
+@import "@{templateLocal}/less/plugins/plugin-blog.less"; // Plugin: Blog
+@import "@{templateLocal}/less/plugins/plugin-menu.less"; // Plugin: Menu
+@import "@{templateLocal}/less/plugins/plugin-ecommerce.less"; // Plugin: Ecommerce
+@import "@{templateLocal}/less/plugins/plugin-pagination.less"; // Plugin: Pagination
+
+
+
+
+// // -----------------------------
+// // 2. #Page Settings
+// // -----------------------------
+
+// Page Container
+// --------------
+
+.container {
+    width: 90%;
+    margin: 0 5%;
+    @media only screen and (min-width: 1140px) {
+    	width: 960px; // 1140px - 10% for margins
+		margin: 0 auto;
+	}
+}
+
+
+// Zone Content
+// ------------
+
+.zone-content {
+	margin: 50px 0;
+}
+
+
+
+
+
+

@@ -1,0 +1,137 @@
+// -------------------------------
+// Prism: CSS > Plugin: Blog
+// -------------------------------
+
+// -----------------------------
+// Blog Post
+// -----------------------------
+
+// Post Article
+// ------------
+
+.post-article {
+	padding: 40px 0 40px 0;
+	margin-bottom: 0px;
+	min-height: 300px;
+	@media @tablet {
+		padding: 20px 20px 30px 0px;
+		text-align: center;
+	}
+}
+
+
+// Post Image
+// ------------
+
+.post-image {
+	max-width: 250px;
+	max-height: 250px;
+	float: left;
+	@media @tablet {
+		margin: 0 auto;
+		float: none;
+	}
+}
+
+
+// Post Content
+// ------------
+
+// Post content positioning
+.post-content {
+	padding: 0px 0px 0px 290px;
+	@media @tablet {
+		padding: 20px 20px 0px 0px;
+	}
+}
+
+// Title link
+.title-link:hover {
+	text-decoration: none;
+}
+
+// Post Excerpt
+.post-excerpt p {
+	margin-bottom: 17px;
+}
+
+// Read More Button
+.read-more {
+	padding: 11px 30px;
+	color: @font-swatch7-color;
+	background-color: @button-color;
+	.rounded(@radius: 2px); // Mixin > Other Mixins: Border Radius Mixin
+	.transition(@duration:0.2s, @ease:ease-out); // Mixin > Other Mixins: Transitions
+	&:hover {
+		background-color: lighten(@button-color,10%);
+		text-decoration: none;
+	}
+	&:focus {
+		outline: 0;
+	}
+}
+
+
+// Post Footer
+// -----------
+
+.post-footer {
+	padding: 0px 0px 0px 290px;
+	@media @tablet { 
+		padding: 0px 20px 30px 0px;
+	}
+}
+
+// Removes icon margin at mobile
+.blog-post-list__button:before { 
+	@media @mobile {
+		margin-right: 0;
+	}
+}
+
+// Hides network name at mobile
+.blog-post-list__network-name {
+	@media @mobile {
+		display: none;
+	}
+}
+
+
+// Blog Search
+// -----------
+
+// Form Group 
+.form-group.blog-search__form-group {
+	margin-bottom: 0;
+}
+
+.blog-search__form-body {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+.blog-search__form-group:first-child {
+	-ms-flex: 0 11 100%;
+	-webkit-flex: 0 11 100%;
+	flex: 0 11 100%;
+	margin-right: 10px;
+}
+
+// Hide search label
+.blog-search__label { display: none; }
+
+// Search Input
+.input--search.blog-search__input { width: 100%; }
+
+
+// Sharing Buttons
+// ---------------
+
+.blog-post__button,
+.blog-post-list__button { 
+	padding: 8px 10px;
+	font-size: 14px;
+}
+
+
