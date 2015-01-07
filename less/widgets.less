@@ -216,7 +216,7 @@
 	display: inline-block;
 	margin-bottom: 16px;
 	padding: 3px 11px;
-	background-color: @button-color;
+	background-color: @contrast-color;
 }
 
 
@@ -519,7 +519,7 @@ button,
 	vertical-align: top;
 	@media @mobile {
 		width: 100%;
-		margin-right: 0;	
+		margin-right: 0;
 	}
 }
 
@@ -563,7 +563,8 @@ button,
 // -----------------------------
 
 hr.rule {
-    background-color: darken(@bg-color-alt,5%);
+    background-color: @bg-color-alt;
+    height: 1px;
 }
 
 
