@@ -3,7 +3,7 @@
 // -------------------------------
 
 // -----------------------------
-// Blog Post
+// Blog List
 // -----------------------------
 
 // Post Article
@@ -94,6 +94,41 @@
 	@media @mobile {
 		display: none;
 	}
+}
+
+
+// Blog Post - Inherits blog list styles above
+// -------------------------------------------
+
+.widget__blogpost {
+
+	// Aligns the footer to the right
+	.post-footer {
+		position: absolute;
+		top: 320px;
+		width: 250px;
+		padding: 30px;
+		background-color: @bg-color-alt;
+		.rounded(@radius: 2px); // Mixin > Other Mixins: Border Radius Mixin
+		@media @tablet { 
+			position: relative;
+			padding: 0px 20px 30px 0px;
+			top: 0px;
+			width: auto;
+			background-color: transparent;
+		}
+
+		// Sets the sharing links to block
+		.network-item {
+			display: block;
+			@media @tablet {
+				display: inline-block;
+			}
+		}
+	}
+
+	// Sets the minimum height of the article to stop any smashing
+	.post-article { min-height: 700px; }
 }
 
 
