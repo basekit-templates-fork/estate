@@ -6,15 +6,113 @@
 // #Table of Contents
 // -----------------------------
 
-// 1. #SINGLE PRODUCT
-// 2. #PRODUCT LIST
+// 1. #PRODUCT LIST
+// 2. #SINGLE PRODUCT
 // 3. #PRODUCT IMAGES
 // 4. #BASKET WIDGET
 // 5. #BASKET SUMMARY
 
 
+
+
 // -----------------------------
-// 1. #Single Product
+// 1. #Product List
+// -----------------------------
+
+// Product List
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+// Product Item
+// ------------
+
+.product-item-article {
+    min-height: 450px;
+}
+
+.product-item {
+    position: relative;
+    width: 32%;
+    margin-bottom: 2%;
+    // Display 100% at mobile
+    @media @mobile {
+        width: 100%;
+        margin-bottom: 4%;
+    }
+}
+
+// Image
+.product-listing__image-link {
+    height: 370px;
+    .flex-vert-center; // Mixin > Flexbox: Vertical Align Center Mixin
+    justify-content: center;
+    background-color: @bg-color-alt;
+}
+
+// Title
+.product-item-title {
+    text-align: center;
+}
+
+// Price
+.product-item-price {
+    position: relative;
+    max-width: 30%;
+    text-align: center;
+    height: auto;
+    margin-top: -130px;
+    padding: 3px 11px;
+    color: @bg-color;
+    background-color: @contrast-color;
+    // Increases price width at tablet
+    @media @tablet {
+        max-width: 50%;
+    }
+    // Reduces price width for mobile
+    @media @mobile {
+        max-width: 30%;
+    }
+}
+
+
+// Product Filters
+// ---------------
+
+.product-filters {
+    text-align: center;
+    background-color: @bg-color-alt;
+    padding: 30px 0 0;
+}
+
+.product-listing__form-group,
+.product-listing__select {
+    @media @mobile {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+// Filter Search Input
+.input--search.product-listing__input {
+    padding: 0;
+    font-size: 12px;
+    text-indent: 10px;
+}
+
+// Filter Submit Button
+.button--submit.product-listing__input {
+    padding: 5px 12px;
+    font-size: 16px;
+}
+
+
+
+
+// -----------------------------
+// 2. #Single Product
 // -----------------------------
 
 // Display images and content inline
@@ -49,18 +147,22 @@
 }
 
 // Product Details
-.product-title { font-size: bkscale(@font-swatch1-font-size,0.8); }
-.product-description { font-size: bkscale(@font-swatch5-font-size,0.9); }
-.product-price { color: @color-swatch3; }
+.product-price { font-size: @font-swatch5-font-size; }
 
 
 // Product Form
 // ------------
 
-.product__form      { 
+.product__form {
     margin-top: 20px;
     background-color: transparent;
 }
+
+.product__form-group {
+    float: left;
+    margin-right: 30px;
+}
+
 .product__form-body { margin: 0; }
 
 // Reset legend styles
@@ -71,14 +173,14 @@
 }
 
 // Form Select
-.product__select { min-width: 150px; }
+.product__select { min-width: 353px; }
 
 // Add to Basket,
-// View Basket Buttonss
+// View Basket Buttons
 .button--submit.product__input,
 .product__button {
     min-width: 150px;
-    padding: 5px 10px;
+    padding: 11px 30px;
     text-align: center;
     font-size: 14px;
 }
@@ -92,55 +194,6 @@
 }
 .tag-item:before { 
     content: ',';
-}
-
-
-// -----------------------------
-// 2. #Product List
-// -----------------------------
-
-// Product List
-.product-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;     
-}
-
-// Product Item
-.product-item {
-    position: relative;
-    width: 32%;
-    margin-bottom: 2%;
-    // Display 100% at mobile
-    @media @mobile {
-        width: 100%;
-        margin-bottom: 4%;
-    }
-}
-
-
-// Product Filters
-// ---------------
-
-.product-listing__form-group,
-.product-listing__select {
-    @media @mobile {
-        width: 100%;
-        margin-right: 0;
-    }
-}
-
-// Filtert Search Input
-.input--search.product-listing__input {
-    padding: 0;
-    font-size: 12px;
-    text-indent: 10px;
-}
-
-// Filter Submit Button
-.button--submit.product-listing__input {
-    padding: 4px 12px;
-    font-size: 16px;
 }
 
 
@@ -168,7 +221,7 @@
     min-width: 40%;
     width: 50%;
 	padding: 30px;
-	background-color: darken(@color-swatch1,5%);
+	background-color: darken(@color-swatch1,10%);
     @media @tablet {
         width: 100%;
     }
@@ -229,12 +282,13 @@
 
 // Table Cell Heading 
 .cell--header.basket-summary__cell {
-    background-color: darken(@bg-color,2%);
+    background-color: transparent;
 }
 
 // Table Cell
 .basket-summary__cell { 
-    border: 1px solid darken(@bg-color-alt,7%);
+    border: 1px solid @bg-color-alt;
+    .rounded(@radius: 2px); // Mixin > Other Mixins: Border Radius Mixin
 }
 
 
