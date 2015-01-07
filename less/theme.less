@@ -17,10 +17,17 @@
 	min-height: 200px;
 	padding: 88px 0;
 	background-color: @bg-color;
+	@media @tablet {
+		padding: 75px 0 40px;
+	}
 
 	.company-details {
 		float: left;
 		width: 30%;
+		// Spacing for mobile navigation
+		@media @tablet {
+		margin-bottom: 30px;
+		}
 	}
 }
 
