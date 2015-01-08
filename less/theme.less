@@ -6,29 +6,76 @@
 // 1. #HEADER & FOOTER
 // 2. #TYPOGRAPHY
 // 3. #FORMS
-// 5. #IMAGES
+// 4. #IMAGES
 
 
 // -----------------------------
 // 1. #Header & Footer
 // -----------------------------
 
+
+// Header
+// ------
+
+// Container Styles
+.container-header {
+	width: 90%;
+	margin: 0 5%;
+	.flex-vert-center; // Mixin > Flexbox: Vertical Align Center Mixin
+
+	// Matches regular container styles
+	@media only screen and (min-width: 1140px) {
+    width: 960px;
+    margin: 0 auto;
+  	}
+
+  	// Removes flexbox at tablet
+	@media @tablet {
+		display: inline-block;
+	}
+}
+
+// Header Styles
 .template-header {
-	min-height: 200px;
-	padding: 88px 0;
+	margin: 78px 0;
+	padding: 0;
 	background-color: @bg-color;
 	@media @tablet {
-		padding: 75px 0 40px;
+		min-height: 100px;
+		margin: 50px 0 40px;
+		padding: 0;
 	}
+}
 
-	.company-details {
-		float: left;
-		width: 30%;
-		// Spacing for mobile navigation
-		@media @tablet {
+// Logo & Company Name
+// -------------------
+
+.company-details {
+	float: left;
+	// max-width: 40%;
+	.flex-vert-center; // Mixin > Flexbox: Vertical Align Center Mixin
+
+	// Spacing for mobile navigation
+	@media @tablet {
 		margin-bottom: 30px;
-		}
 	}
+	@media @mobile {
+		width: 80%;
+	}
+}
+
+// Logo
+.company-logo {
+	float: left;
+	margin-right: 10px;
+	@media @mobile {
+		max-width: 80%;
+	}
+}
+
+// Company Name
+.company-name {
+	float: right;
 }
 
 
@@ -169,6 +216,7 @@ legend {
 	font-size: @font-swatch2-font-size;
 	color: @color-swatch3;
 	letter-spacing: @font-swatch2-letter-spacing;
+	text-transform: uppercase;
 	@media @mobile {
 		padding: 6px 20px;
 	}
@@ -213,7 +261,7 @@ textarea,
 
 
 // -----------------------------
-// 5. #Images
+// 4. #Images
 // -----------------------------
 
 // Image Captions
