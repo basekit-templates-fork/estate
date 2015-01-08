@@ -49,7 +49,6 @@
 
 .company-link {
 	padding-bottom: 4px;
-	border-bottom: 3px solid @color-swatch1;
 	&:hover {
 		text-decoration: none;
 	}
@@ -80,7 +79,7 @@
 .widget__feature {
 	text-align: center;
 	max-width: 960px;
-	margin: 0 auto;
+	margin: 0 auto 60px;
 }
 
 
@@ -88,7 +87,7 @@
 // --------------------------
 
 .feature-widget__background-image {
-	min-height: 500px;
+	min-height: 510px;
 	.flex-vert-center; // Mixin > Flexbox: Vertical Align Center Mixin
 }
 
@@ -216,7 +215,7 @@
 .image-description {
 	display: inline-block;
 	margin-bottom: 16px;
-	padding: 3px 11px;
+	padding: 0px 11px;
 	background-color: @contrast-color;
 }
 
@@ -270,7 +269,7 @@
 // Slideshow Controls
 // ------------------
 
-// Naviation Buttons
+// Navigation Buttons
 .slide-navigation {
 	position: absolute;
 	top: 0;
@@ -316,6 +315,10 @@ button.pause-toggle {
 	color: @contrast-color;
 	background-color: transparent;
 	font-size: 15px;
+	&:hover {
+		background-color: transparent;
+		color: @bg-color-alt;
+	}
 	// Removes margin-right for icons
 	&:before {
 		margin-right: 0;
@@ -369,6 +372,7 @@ button,
 	padding: 11px 30px;
 	.rounded(@radius: 2px); // Mixin > Other Mixins: Border Radius Mixin
 	.transition(@duration:0.2s, @ease:ease-out); // Mixin > Other Mixins: Transitions
+	text-transform: uppercase;
 	&:focus {
 		outline: 0;
 	}
@@ -381,6 +385,11 @@ button,
 
 //  8.3  #STANDARD
 //  --------------
+
+// Allows the user to define a non-uppercase button if they wish
+.button-widget__button {
+	text-transform: none;
+}
 
 
 //  8.4  #DROPBOX
