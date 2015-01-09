@@ -46,8 +46,13 @@
 
 
 // Navigation Link
-.item-name {
+.navigation-item .item-name {
 	padding: 16px 20px;
+	.transition(@duration:0.2s, @ease:ease-out); // Mixin > Other Mixins: Transitions
+	&:hover {
+		color: darken(@bg-color-alt,50%);
+		-webkit-font-smoothing: antialiased;
+	}
 }
 
 // Dropdown Menu
