@@ -22,6 +22,9 @@
             "color7":"#ffffff"
         }
     },
+    "images":[
+        "images/feature-bg.jpg"
+    ],
     "fontSwatch": {
        "title": "Open Sans",
         "font1": {
