@@ -1,28 +1,16 @@
 {
     "name":"Prism",
+    "widgetVersion": 2,
     "thumbnail":"thumbnail.png",
     "screenshot":"thumbnail.png",
     "templateType":"standard",
     "pageTypes": ["home"],
-    "widgetVersion": 2,
     "tags": {
     "en": ["minimal", "clean", "floral", "modern", "creative", "typography", "simple", "contemporary", "flexible", "florist", "studio", "portfolio", "designer", "sans-serif"],
     "es": ["minimalista", "limpio", "decorativo", "moderno", "creativo", "tipográfico", "simple", "contemporaneo", "flexible", "florista", "estudio", "portafolio", "diseñador", "sans-serif"],
     "br": ["minimalista", "limpo", "florido", "moderno", "criativo", "tipográfico", "simples", "contemporâneo", "flexível", "florista", "estúdio", "portfolio", "designer", "sans-serif"]
     },
-    "colorSwatches":
-    {
-        "Swatch 1": {
-            "color1":"#ffffff",
-            "color2":"#333333",
-            "color3":"#333333",
-            "color4":"#333333",
-            "color5":"#666666",
-            "color6":"#333333",
-            "color7":"#ffffff"
-        }
-    },
-    "images":[
+"images":[
         "images/feature-bg.jpg",
         "images/gallery/1.jpg",
         "images/gallery/2.jpg",
@@ -37,6 +25,18 @@
         "images/lozenges/loz-2.jpg",
         "images/lozenges/loz-3.jpg"
     ],
+    "colorSwatches":
+    {
+        "Swatch 1": {
+            "color1":"#ffffff",
+            "color2":"#333333",
+            "color3":"#333333",
+            "color4":"#333333",
+            "color5":"#666666",
+            "color6":"#333333",
+            "color7":"#ffffff"
+        }
+    },
     "fontSwatch": {
        "title": "Open Sans",
         "font1": {
