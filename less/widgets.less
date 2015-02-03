@@ -38,7 +38,9 @@
 // 1.  #Logo
 // -----------------------------
 
-// No styles
+.logo-image {
+    margin-right: 10px;
+}
 
 
 
@@ -47,16 +49,10 @@
 // 2.  #Company Name
 // -----------------------------
 
-.company-link {
-	padding-bottom: 4px;
-	&:hover {
+.company-link:hover {
 		text-decoration: none;
-	}
-	// Remove border at mobile
-	@media @mobile {
-		border-bottom: 0;
-	}
 }
+
 
 
 
@@ -86,7 +82,7 @@
 // Feature Background (Image)
 // --------------------------
 
-.feature-widget__background-image {
+.feature__background-image {
 	min-height: 510px;
 	.flex-vert-center; // Mixin > Flexbox: Vertical Align Center Mixin
 }
@@ -95,7 +91,7 @@
 // Feature Content Wrap
 // --------------------
 
-.feature-widget__content-wrap {
+.feature__content-wrap {
 	width: 100%;
 	padding: 50px;
 }
@@ -104,7 +100,12 @@
 // Feature Content
 // ---------------
 
-.feature-widget__button {
+.feature__headline,
+.feature__strapline {
+    color: @bg-color;
+}
+
+.feature__button {
 	display: inline-block;
 	margin: 20px 0 0;
 	border: @color-swatch1 solid 2px;
@@ -124,13 +125,17 @@
 
 
 // -----------------------------
-// 5.  #Images
+// 5. #Images
 // -----------------------------
 
-.image-title.image-widget__image-title,
-.image-description.image-widget__image-description {
-	background-color: transparent;
-	display: block;
+
+// Image Widget
+.image-title,
+.image-description {
+    color: @paragraph-color;
+    @media @tablet {
+        font-size: bkscale(@font-swatch5-font-size,50%);
+    }
 }
 
 
@@ -144,7 +149,7 @@
 // --------------
 
 // Gallery List
-.image-gallery__gallery-list {
+.gallery-list {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -161,7 +166,7 @@
 }
 
 // Gallery Item
-.image-gallery__gallery-item {
+.gallery-item {
     position: relative;
     width: 32%;
     margin-bottom: 2%;
@@ -177,7 +182,7 @@
 // --------------
 
 // Use Background-image Method
-.image-gallery__image-link {
+.gallery__image-link {
     display: block;
     height: 370px;
     background-repeat: no-repeat;
@@ -189,7 +194,7 @@
 }
 
 // Hide Img Element
-.image-gallery__image {
+.gallery__image {
     display: none;
 }
 
@@ -198,15 +203,16 @@
 // ----------------------
 
 // Hide Caption
-.caption.image-gallery__caption {
+.caption.gallery__caption {
 	display: none;
 	margin: 0;
 	padding: 30px 0px 30px 20px;
 	text-align: right;
+    cursor: pointer;
 }
 
 // Show Caption
-.image-link:hover .caption {
+.gallery-item:hover .caption {
 	position: absolute;
 	top: 0;
 	display: block;
@@ -219,8 +225,9 @@
 }
 
 // Title and description
-.image-title,
-.image-description {
+.gallery__image-title,
+.gallery__image-description {
+    color: @bg-color;
 	display: inline-block;
 	margin-bottom: 16px;
 	padding: 0px 11px;
@@ -238,7 +245,7 @@
 // ----------------
 
 // Slideshow Height
-.slideshow, .slideshow__figure {
+.responsiveslideshow, .responsiveslideshow__figure {
     position: relative;
     min-height: 400px;
 }
@@ -248,12 +255,12 @@
 // ----------------
 
 // Use Background-image Method
-.slideshow__figure {
+.responsiveslideshow__figure {
     background-size: cover;
     background-position: center;
 }
 // Hide Img Element
-.slideshow__image {
+.responsiveslideshow__image {
     display: none;
 }
 
@@ -261,17 +268,19 @@
 // Slideshow Image Captions
 // ------------------------
 
-.slideshow__caption {
+.responsiveslideshow  .caption {
     position: absolute;
     bottom: 0;
     width: 100%;
     padding: 20px;
+    background-color: @contrast-color;
 }
 
-.slideshow__image-title,
-.slideshow__image-description {
+.responsiveslideshow__image-title,
+.responsiveslideshow__image-description {
 	width: 100%;
 	margin-bottom: 0px;
+    color: @bg-color;
 }
 
 
@@ -315,8 +324,8 @@
 }
 
 // Prev, Next, Pause Buttons
-button.slideshow__previous-button,
-button.slideshow__next-button,
+button.responsiveslideshow__previous-button,
+button.responsiveslideshow__next-button,
 button.pause-toggle {
 	width: 50px;
 	height: 50px;
@@ -334,7 +343,7 @@ button.pause-toggle {
 	}
 }
 // Removes button text
-.slideshow__control-text {
+.responsiveslideshow__control-text {
 	display: none;
 }
 
@@ -348,18 +357,20 @@ button.pause-toggle {
 }
 
 // Pagination Item
-.slideshow__pagination-item {
-	margin: 0 4px;
+.responsiveslideshow__pagination-item {
+	margin: 10px 4px 0;
 }
 
 // Pagination Button
-button.slideshow__button {
-	background-color: darken(@color-swatch1,20%);
+.responsiveslideshow .button--pagination {
 	border-radius: 100%;
 	padding: 0px;
 	width: 10px;
 	height: 10px;
+    text-indent: 9999px;
+    background-color: darken(@color-swatch1,20%);
 }
+
 // Selected Item
 .slideshow__pagination-item.selected .slideshow__button {
     background-color: @color-swatch7;
@@ -474,7 +485,7 @@ button,
 }
 
 // Hide Social name
-.social-icons__social-name {
+.social-name {
 	display: none;
 }
 
@@ -604,6 +615,7 @@ hr.rule {
 		display: none;
 	}
 }
+
 
 
 

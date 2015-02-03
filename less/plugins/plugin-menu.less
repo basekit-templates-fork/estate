@@ -17,6 +17,11 @@
 	text-align: center;
 }
 
+.section-header {
+	margin-bottom: 40px;
+	text-align: center;
+}
+
 
 
 
@@ -25,29 +30,17 @@
 // -----------------------------
 
 
-// #Menu Positioning
-// -----------------
-
-.widget__menu {
-	text-align: center;
-}
-
-
 // #Images
-// -------
+// ----------
 
-.item-image {
+.menu .item-image .image-link,
+.menu-item--featured .item-image .image-link {
 	background-color: transparent;
 }
 
-// #Header
-// -------
 
-.item-header {
-	width: 60%;
-	margin: 0 auto 20px;
-	position: relative;
-}
+// #Header
+// ----------
 
 .item-title {
 	color: @color-swatch1;
@@ -61,16 +54,24 @@
 	background-color: @contrast-color;
 	padding: 3px 11px;
 	width: 40%;
-	margin: 0 auto;
+}
+
+
+// #Featured
+// ----------
+
+.menu-item--featured,
+.menu-section--featured {
+	background-color: transparent;
+	padding: 40px;
+	border: 4px solid @contrast-color;
 }
 
 
 // #Footer
-// -------
+// ----------
 
 .item-subtitle {
 	text-transform: uppercase;
 	color: @heading-color;
 }
-
-

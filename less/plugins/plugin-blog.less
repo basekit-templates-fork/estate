@@ -40,6 +40,7 @@
 // Post content positioning
 .post-content {
 	padding: 0px 0px 0px 290px;
+	margin: 0;
 	@media @tablet {
 		padding: 20px 20px 0px 0px;
 	}
@@ -78,13 +79,14 @@
 
 .post-footer {
 	padding: 0px 0px 0px 290px;
-	@media @tablet { 
+	margin: 30px 0 0;
+	@media @tablet {
 		padding: 0px 20px 30px 0px;
 	}
 }
 
 // Removes icon margin at mobile
-.blog-post-list__button:before { 
+.blog-post-list__button:before {
 	@media @mobile {
 		margin-right: 0;
 	}
@@ -111,7 +113,7 @@
 		padding: 30px;
 		background-color: @bg-color-alt;
 		.rounded(@radius: 2px); // Mixin > Other Mixins: Border Radius Mixin
-		@media @tablet { 
+		@media @tablet {
 			position: relative;
 			padding: 0px 20px 30px 0px;
 			top: 0px;
@@ -136,18 +138,18 @@
 // Blog Search
 // -----------
 
-// Form Group 
-.form-group.blog-search__form-group {
+// Form Group
+.form-group.blogsearch__form-group {
 	margin-bottom: 0;
 }
 
-.blog-search__form-body {
+.blogsearch__form-body {
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
 }
 
-.blog-search__form-group:first-child {
+.blogsearch__form-group:first-child {
 	-ms-flex: 0 11 100%;
 	-webkit-flex: 0 11 100%;
 	flex: 0 11 100%;
@@ -155,21 +157,25 @@
 }
 
 // Hide search label
-.blog-search__label { display: none; }
+.blogsearch__label { display: none; }
 
 // Search Input
-.input--search.blog-search__input { width: 100%; }
+.input--search.blogsearch__input { width: 100%; }
 
 
 // Sharing Buttons
 // ---------------
 
+.sharing-links {
+	margin-top: 20px;
+}
+
 .network-item {
 	margin-right: 0px;
 }
 
-.blog-post__button,
-.blog-post-list__button { 
+.blogpost__button,
+.blogpost-list__button {
 	padding: 8px 10px;
 	font-size: 14px;
 	min-width: 190px;

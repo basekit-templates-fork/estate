@@ -1,5 +1,5 @@
 // ------------------------------------
-// Beta Studio: CSS > Plugin: Ecommerce
+// Prism: CSS > Plugin: Ecommerce
 // ------------------------------------
 
 // -----------------------------
@@ -29,14 +29,18 @@
 // Product Item
 // ------------
 
+// Sets a minimum height of the article - A bit ugly but because the image is
+// 370px it needs this to stop it crashing.
 .product-item-article {
     min-height: 450px;
 }
 
+// This sets up the widths for each item
 .product-item {
     position: relative;
     width: 32%;
     margin-bottom: 2%;
+
     // Display 100% at mobile
     @media @mobile {
         width: 100%;
@@ -45,11 +49,21 @@
 }
 
 // Image
-.product-listing__image-link {
+.product-item-image {
     height: 370px;
     .flex-vert-center; // Mixin > Flexbox: Vertical Align Center Mixin
     justify-content: center;
     background-color: @bg-color-alt;
+}
+
+.product-item-image .image-link {
+    height: 100%;
+
+    // I had to duplicate flexbox here because of the removed a link
+    .flex-vert-center; // Mixin > Flexbox: Vertical Align Center Mixin
+    justify-content: center;
+
+    background-color: transparent;
 }
 
 // Title
@@ -87,8 +101,8 @@
     padding: 30px 0 0;
 }
 
-.product-listing__form-group,
-.product-listing__select {
+.ecomproductslist__form-group,
+.ecomproductslist__select {
     @media @mobile {
         width: 100%;
         margin-right: 0;
@@ -96,14 +110,14 @@
 }
 
 // Filter Search Input
-.input--search.product-listing__input {
+.input--search.ecomproductslist__input {
     padding: 0;
     font-size: 12px;
     text-indent: 10px;
 }
 
 // Filter Submit Button
-.button--submit.product-listing__input {
+.button--submit.ecomproductslist__input {
     padding: 5px 12px;
     font-size: 16px;
 }
@@ -153,46 +167,52 @@
 // Product Form
 // ------------
 
-.product__form {
+.ecomproduct__form {
     margin-top: 20px;
     background-color: transparent;
 }
 
-.product__form-group {
+.ecomproduct__form-group {
     float: left;
     margin-right: 30px;
 }
 
-.product__form-body { margin: 0; }
+.ecomproduct__form-body { margin: 0; }
 
 // Reset legend styles
-.product__legend {
+.ecomproduct__legend {
     padding: 0 0 10px;
     background-color: transparent;
     border: 0;
 }
 
 // Form Select
-.product__select { min-width: 353px; }
+.ecomproduct__select {
+    min-width: 377px;
+
+        @media @mobile {
+            min-width: 172px;
+        }
+}
 
 // Add to Basket,
 // View Basket Buttons
-.button--submit.product__input,
-.product__button {
+.button--submit.ecomproduct__input,
+.ecomproduct__button {
     min-width: 150px;
     padding: 11px 30px;
     text-align: center;
     font-size: 14px;
 }
 
-// Product Tags
+// product Tags
 .tag-item {
     margin-right: -4px;
 }
 .tag-item:first-child:before {
     display: none;
 }
-.tag-item:before { 
+.tag-item:before {
     content: ',';
 }
 
@@ -205,7 +225,7 @@
 
 // Adds margin to product image div
 .product-item-image,
-.basket-item-image { 
+.basket-item-image {
     margin-bottom: 20px;
 }
 
@@ -265,7 +285,7 @@
 }
 
 // Hide button text
-.remove-text { 
+.remove-text {
     display: none;
 }
 
@@ -280,13 +300,13 @@
 // Basic Cell Settings
 // -------------------
 
-// Table Cell Heading 
+// Table Cell Heading
 .cell--header.basket-summary__cell {
     background-color: transparent;
 }
 
 // Table Cell
-.basket-summary__cell { 
+.basket-summary__cell {
     border: 1px solid @bg-color-alt;
     .rounded(@radius: 2px); // Mixin > Other Mixins: Border Radius Mixin
 }

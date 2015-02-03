@@ -6,18 +6,18 @@
 // Navigation Position
 // -------------------
 
-[data-widget-type="navigation"] {
+[data-widget-type="extendednavigation"] {
 	-webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
 }
 
-.widget__navigation {
-	float: right;
-	@media @tablet {
-		float: none;
-	}
-}
+// .widget__navigation {
+// 	float: right;
+// 	@media @tablet {
+// 		float: none;
+// 	}
+// }
 
 
 // Navigation List
@@ -29,10 +29,11 @@
 }
 
 
-// Default Page
-.default-page .navigation-list--children {
-	background-color: @color-swatch1;
-}
+// // Default Page
+// .default-page .navigation-list--children {
+// 	background-color: @color-swatch1;
+// }
+
 
 // Navigation Item
 // ---------------
@@ -57,11 +58,12 @@
 
 // Dropdown Menu
 // -------------
+
 .navigation-item.folder {
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
-.item-name--parent {
 
+.item-name--parent {
 	&:after {
 		font-family: 'FontAwesome', sans-serif;
 		content: "\f107";
@@ -92,10 +94,10 @@
 .default-page .navigation-list--children {
 	@media @tablet {
 		border-top: none;
-		// background-color: @color-swatch1;
+		color: @nav-color;
 		position: relative;
 		top: 0;
-		background-color: lighten(@bg-color-alt,2%);
+		background-color: @bg-color-alt;
 		.navigation-item:hover & {
 			display: none;
 		}
@@ -128,30 +130,33 @@
 .navigation-toggle {
 	display: none;
 	@media @tablet {
-		text-indent: 999px;
-		padding: 11px 20px;
+		// Positioning
 		display: block;
-		position: absolute;
-		top: 22px;
-		right: 9px;
+		float: right;
 		width: 42px;
 		height: 37px;
-		cursor: pointer;
-		background-color: @color-swatch1;
+		margin-top: 20px;
+		text-indent: 999px;
+		padding: 11px 20px;
+
+		// Visual
 		border: 1px solid @color-swatch2;
+		background-color: @color-swatch1;
+		cursor: pointer;
 		-webkit-tap-highlight-color: rgba(0,0,0,0);
+
 		&:hover {
 			background-color: @bg-color-alt;
 		}
 		&:after {
             content: '';
 			position: absolute;
+			top: 31px;
+			right: 10px;
 			width: 22px;
 			height: 2px;
 			background: @color-swatch2;
 			box-shadow: 0 6px 0 @color-swatch2, 0 12px 0 @color-swatch2;
-			top: 11px;
-			right: 9px;
         }
 	}
 }
