@@ -239,9 +239,10 @@
 // Basket Body
 .basket-body {
     min-width: 40%;
-    width: 50%;
+    width: 100%;
 	padding: 30px;
-	background-color: darken(@color-swatch1,10%);
+
+	// background-color: darken(@color-swatch1,10%);
     @media @tablet {
         width: 100%;
     }
@@ -255,14 +256,33 @@
 	position: relative;
 	padding: 30px;
 	background-color: @bg-color;
+    border-top: 4px solid @contrast-color;
+
+    &:last-child {
+        border-bottom: 4px solid @contrast-color;
+    }
 }
 
 // Remove BG colour on summary form
 .form.basket-summary__summary-form { background-color: transparent; }
 
 
-// Baseket Layout
-// --------------
+// Basket Layout
+// -------------
+
+.basket-item-image,
+.basket-item-details {
+    display: inline-block;
+}
+
+
+// Basket Image
+// ------------
+
+.basket-item-image {
+    margin-bottom: 0;
+    margin-right: 20px;
+}
 
 
 // Remove Item Button
@@ -287,6 +307,22 @@
 // Hide button text
 .remove-text {
     display: none;
+}
+
+
+// Basket Footer
+// -------------
+
+.basket-footer {
+    margin-top: 0;
+    padding: 30px;
+    background-color: darken(@color-swatch1,10%);
+}
+
+.basket-total {
+    padding-bottom: 20px;
+    color: @heading-color;
+    text-transform: uppercase;
 }
 
 
