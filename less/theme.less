@@ -85,31 +85,18 @@ body { -webkit-font-smoothing: antialiased; }
 
 .company-details {
 	float: left;
-	// max-width: 40%;
 	.flex-vert-center; // Mixin > Flexbox: Vertical Align Center Mixin
 
 	// Spacing for mobile navigation
 	@media @tablet {
 		margin-bottom: 30px;
-	}
-	@media @mobile {
-		width: 80%;
-	}
-}
-
-// Logo
-.company-logo {
-	float: left;
-	margin-right: 10px;
-	@media @mobile {
-		max-width: 80%;
+        width: 100%;
+        float: none;
+        display: block;
 	}
 }
 
-// Company Name
-.company-name {
-	float: right;
-}
+
 
 
 // Footer

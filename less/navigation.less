@@ -3,10 +3,17 @@
 // --------------------------------
 
 
+// This forces the navigation to be centered on a mobile device
+.extendednavigation.align-right,
+.extendednavigation.align-left {
+	@media @tablet {text-align: center;}
+}
+
+
 // Navigation Position
 // -------------------
 
-[data-widget-type="extendednavigation"] {
+.header-navigation {
 	-webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
@@ -57,10 +64,9 @@
 		display: inline-block;
 		vertical-align: top;
 		margin-left: 0.8em;
-		-webkit-transition: all 0.2s ease;
-		-moz-transition: all 0.2s ease;
-		-o-transition: all 0.2s ease;
-		transition: all 0.2s ease;
+
+		.transition(@duration:0.2s, @ease:ease); // Mixin > Other Mixins: Transitions
+
 		@media @tablet {
 			content: "\f101";
 			font-size: 0.8em;
@@ -110,6 +116,12 @@
 	}
 }
 
+// Styles when navigation is open
+.open .navigation-body {
+	padding: 20px 0;
+	border-bottom: 1px solid @contrast-color;
+}
+
 // Toggle Button
 // -------------
 
@@ -119,7 +131,7 @@
 	@media @tablet {
 		// Positioning
 		display: block;
-		float: right;
+		margin: 0 auto;
 		width: 42px;
 		height: 37px;
 		margin-top: 20px;
@@ -138,9 +150,14 @@
 		&:after {
             content: '';
 			position: absolute;
-			top: 31px;
-			right: 10px;
+			top: 12px;
+			right: 50%;
 			width: 22px;
+			transform: translate(50%,0%);
+			-webkit-transform: translate(50%,0%);
+			-moz-transform: translate(50%,0%);
+			-o-transform: translate(50%,0%);
+			-ms-transform: translate(50%,0%);
 			height: 2px;
 			background: @color-swatch2;
 			box-shadow: 0 6px 0 @color-swatch2, 0 12px 0 @color-swatch2;

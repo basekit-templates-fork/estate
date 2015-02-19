@@ -38,8 +38,16 @@
 // 1.  #Logo
 // -----------------------------
 
+
+.logo {
+    @media @tablet { margin-bottom: 20px; }
+}
+
+// Logo
 .logo-image {
-    margin-right: 10px;
+    @media @tablet {
+        margin: 0 auto;
+    }
 }
 
 
@@ -49,8 +57,21 @@
 // 2.  #Company Name
 // -----------------------------
 
+
+.companyname {
+    float: right;
+    margin-left: 10px;
+
+     @media @tablet {
+        float: none;
+        text-align: center;
+        margin-bottom: 20px;
+        margin-left: 0;
+    }
+}
+
 .company-link:hover {
-		text-decoration: none;
+        text-decoration: none;
 }
 
 
