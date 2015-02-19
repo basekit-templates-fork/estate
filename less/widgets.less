@@ -112,6 +112,7 @@
 .feature__background-image {
 	min-height: 510px;
 	.flex-vert-center; // Mixin > Flexbox: Vertical Align Center Mixin
+    background-size: cover;
 
     @media @mobile {min-height: 300px;}
 }
@@ -123,25 +124,31 @@
 .content-wrap {
     width: 60%;
     margin: 0 auto;
+    padding: 0;
     background-color: fade(@color-swatch2,40%);
 
     @media @tablet { width: 90%;}
-    @media @mobile { width: 100%;}
+
+    @media @mobile {
+        width: 100%;
+        min-height: 300px;
+    }
 }
 
 
-// Feature Content
-// ---------------
+// Feature Content Inner Wrap
+// --------------------------
 
 .feature  .headline,
 .feature  .strapline {
+    padding: 10px 0;
     color: @bg-color;
     text-shadow: 2px 2px rgba(0,0,0,0.1);
 }
 
 .feature  .button {
 	display: inline-block;
-	margin: 20px 0 0;
+	margin: 20px 0;
 	border: @color-swatch1 solid 2px;
 	background-color: transparent;
 	.rounded(@radius: 2px); // Mixin > Other Mixins: Border Radius Mixin
