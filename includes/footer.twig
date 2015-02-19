@@ -2,8 +2,12 @@
 <footer class="template-footer">
 
 	<div class="container-footer">
-        {{widget('profile', 'profile', { 'profileType':'socialicons', 'googleplus': 'profile', 'linkedin':'profile', 'facebook': 'profile', 'twitter': 'profile', 'youtube': 'profile', 'rss': 'profile'})|raw}}
-        {{widget('profile', 'profile1', {'profileType':'copyright', 'copyright':'profile', 'refreshtime':'1800000'})|raw}}
+        <div class="footer-profile">
+            {{widget('profile', 'profile', { 'profileType':'socialicons', 'googleplus': 'profile', 'linkedin':'profile', 'facebook': 'profile', 'twitter': 'profile', 'youtube': 'profile', 'rss': 'profile'})|raw}}
+        </div>
+         <div class="footer-profile1">
+            {{widget('profile', 'profile1', {'profileType':'copyright', 'copyright':'profile', 'refreshtime':'1800000'})|raw}}
+        </div>
 	</div>
 
 </footer>
