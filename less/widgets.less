@@ -40,14 +40,16 @@
 
 
 .logo {
-    @media @tablet { margin-bottom: 20px; }
+    max-width: 400px;
+    @media @tablet {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
 }
 
 // Logo
 .logo-image {
-    max-width: 400px;
     @media @tablet {
-        max-width: 100%;
         margin: 0 auto;
     }
 }
