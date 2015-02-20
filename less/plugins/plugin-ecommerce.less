@@ -100,9 +100,13 @@
 // ---------------
 
 .product-filters {
-    text-align: center;
-    background-color: @bg-color-alt;
+    // text-align: center;
+    // background-color: @bg-color-alt;
     padding: 30px 0 0;
+}
+
+.product-filters  .legend {
+    display: none;
 }
 
 .ecomproductslist__form-group,
@@ -126,6 +130,33 @@
     font-size: 16px;
 }
 
+
+// Responsive Columns
+// ------------------
+
+.responsivecolumns {
+
+    // Image
+    .product-item-image {
+        height: 200px;
+    }
+
+    // Price
+    .product-item-price {
+        max-width: inherit;
+        height: auto;
+        padding: 3px 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: bkscale(@font-swatch5-font-size,0.8);
+    }
+
+    .product-item-title {
+        font-size: @font-swatch5-font-size;
+        line-height: bkscale(@font-swatch5-line-height,0.8);
+        text-align: left;
+    }
+}
 
 
 
