@@ -107,9 +107,14 @@ body { -webkit-font-smoothing: antialiased; }
 // ------
 
 .container-footer {
-	max-width: 960px;
-	margin: 0 auto;
-	padding: 30px 0;
+    width: 90%;
+    margin: 0 5%;
+    padding: 30px 0;
+    @media only screen and (min-width: 1140px) {
+        width: 960px; // 1140px - 10% for margins
+        margin: 0 auto;
+    }
+
 	// Flex box for desktop
 	border-top: 1px solid @bg-color-alt;
 	display: -webkit-flex;
