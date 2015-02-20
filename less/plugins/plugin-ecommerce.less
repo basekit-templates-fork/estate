@@ -115,15 +115,28 @@
     }
 }
 
+
+// Styles filters
 .fieldset--filters .ecomproductslist__form-body {
     text-align: center;
-    padding-top: 13px;
+    padding: 13px 10px 0;
     background-color: @bg-color-alt;
+    width: 80%;
+    margin: 0 auto;
+
+    @media @tablet { width: 100%; }
 }
 
+// Styles Search
 .fieldset--search .ecomproductslist__form-body {
     text-align: right;
     background-color: transparent;
+    margin: 10px 0;
+}
+
+// Hides search label
+.label--search {
+    display: none;
 }
 
 // Filter Search Input
