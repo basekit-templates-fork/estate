@@ -9,98 +9,156 @@
 // Post Article
 // ------------
 
-.post-article {
-	padding: 40px 0 40px 0;
-	margin-bottom: 0px;
-	min-height: 300px;
-	clear: both;
-	@media @tablet {
-		padding: 20px 20px 30px 0px;
-		text-align: center;
+.blogpostlist {
+
+	.post-article {
+		padding: 40px 0 40px 0;
+		margin-bottom: 0px;
+		min-height: 300px;
+		clear: both;
+		@media @tablet {
+			padding: 20px 20px 30px 0px;
+			text-align: center;
+		}
 	}
-}
 
 
-// Post Image
-// ------------
+	// Post Image
+	// ------------
 
-.post-image {
-	max-width: 250px;
-	max-height: 350px;
-	float: left;
-	@media @tablet {
-		margin: 0 auto;
-		float: none;
-		max-width: 350px;
+	.post-image {
+		max-width: 250px;
 		max-height: 350px;
+		float: left;
+		@media @tablet {
+			margin: 0 auto;
+			float: none;
+			max-width: 350px;
+			max-height: 350px;
+		}
 	}
-}
+
+	.post-image  .image { margin: 0 auto; }
 
 
-// Post Content
-// ------------
+	// Post Content
+	// ------------
 
-// Post content positioning
-.post-content {
-	padding: 0px 0px 0px 290px;
-	margin: 0;
-	@media @tablet {
-		padding: 20px 0px 0px 0px;
+	// Post content positioning
+	.post-content {
+		margin: 0;
+		padding: 0px 0px 0px 290px;
+
+		@media @tablet {
+			padding: 20px 0px 0px 0px;
+		}
 	}
-}
 
-// Title link
-.title-link:hover {
-	text-decoration: none;
-}
-
-// Post Excerpt
-.post-excerpt p {
-	margin-bottom: 17px;
-}
-
-// Read More Button
-.read-more {
-	padding: 11px 30px;
-	color: @font-swatch7-color;
-	font-family: @font-swatch7-font-family;
-	background-color: @button-color;
-	.rounded(@radius: 2px); // Mixin > Other Mixins: Border Radius Mixin
-	.transition(@duration:0.2s, @ease:ease-out); // Mixin > Other Mixins: Transitions
-	text-transform: uppercase;
-	&:hover {
-		background-color: lighten(@button-color,10%);
+	// Title link
+	.title-link:hover {
 		text-decoration: none;
 	}
-	&:focus {
-		outline: 0;
+
+	// Post Excerpt
+	.post-excerpt p {
+		margin-bottom: 17px;
 	}
+
+	// Read More Button
+	.read-more {
+		padding: 11px 30px;
+		color: @font-swatch7-color;
+		font-family: @font-swatch7-font-family;
+		background-color: @button-color;
+		.rounded(@radius: 2px); // Mixin > Other Mixins: Border Radius Mixin
+		.transition(@duration:0.2s, @ease:ease-out); // Mixin > Other Mixins: Transitions
+		text-transform: uppercase;
+		&:hover {
+			background-color: lighten(@button-color,10%);
+			text-decoration: none;
+		}
+		&:focus {
+			outline: 0;
+		}
+	}
+
+
+	// Post Footer
+	// -----------
+
+		.post-footer {
+			padding: 0px 0px 0px 290px;
+			margin: 30px 0 0;
+			@media @tablet {
+				padding: 0px 0px 30px 0px;
+			}
+		}
 }
 
 
-// Post Footer
-// -----------
 
-.post-footer {
-	padding: 0px 0px 0px 290px;
-	margin: 30px 0 0;
-	@media @tablet {
-		padding: 0px 0px 30px 0px;
-	}
-}
 
-// Removes icon margin at mobile
-.blog-post-list__button:before {
-	@media @mobile {
-		margin-right: 0;
-	}
-}
+// -----------------------------
+// Blog Post
+// -----------------------------
 
-// Hides network name at mobile
-.blog-post-list__network-name {
-	@media @mobile {
-		display: none;
+.blogpost {
+
+	.post-image {
+		max-width: 250px;
+		max-height: 350px;
+		float: left;
+		@media @tablet {
+			margin: 0 auto;
+			float: none;
+			max-width: 350px;
+			max-height: 350px;
+		}
 	}
+
+	// Post content positioning
+	.post-content {
+		margin: 0;
+		float: right;
+		max-width: 70%;
+
+		@media only screen and (max-width: 1040px) {max-width: 60%;}
+		@media @tablet {
+			padding: 20px 0px 0px 0px;
+			max-width: 100%;
+			text-align: center;
+		}
+	}
+
+	// Aligns the footer to the right
+	.post-footer {
+		width: 250px;
+		padding: 30px;
+		margin: 30px 0 0;
+		background-color: @bg-color-alt;
+		float: left;
+		clear: left;
+		.rounded(@radius: 2px); // Mixin > Other Mixins: Border Radius Mixin
+		@media @tablet {
+			position: relative;
+			padding: 0px 20px 30px 0px;
+			width: 100%;
+			margin: 0 auto;
+			background-color: transparent;
+			text-align: center;
+		}
+
+		// Sets the sharing links to block
+		.network-item {
+			display: block;
+			@media @tablet {
+				display: inline-block;
+			}
+		}
+	}
+
+	// Sets the minimum height of the article to stop any smashing
+	.post-article { min-height: 700px; }
 }
 
 
@@ -136,40 +194,15 @@
 }
 
 
-
-// Blog Post - Inherits blog list styles above
-// -------------------------------------------
-
-.widget__blogpost {
-
-	// Aligns the footer to the right
-	.post-footer {
-		position: absolute;
-		top: 320px;
-		width: 250px;
-		padding: 30px;
-		background-color: @bg-color-alt;
-		.rounded(@radius: 2px); // Mixin > Other Mixins: Border Radius Mixin
-		@media @tablet {
-			position: relative;
-			padding: 0px 20px 30px 0px;
-			top: 0px;
-			width: auto;
-			background-color: transparent;
-		}
-
-		// Sets the sharing links to block
-		.network-item {
-			display: block;
-			@media @tablet {
-				display: inline-block;
-			}
-		}
-	}
-
-	// Sets the minimum height of the article to stop any smashing
-	.post-article { min-height: 700px; }
-}
+// /* position: absolute; */
+// /* top: 320px; */
+// width: 250px;
+// padding: 30px;
+// background-color: #e6e6e6;
+// -webkit-border-radius: 2px;
+// -moz-border-radius: 2px;
+// border-radius: 2px;
+// float: left;
 
 
 // Blog Search
