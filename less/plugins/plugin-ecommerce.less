@@ -260,6 +260,11 @@
 
 .ecomproduct__form-body { margin: 0; }
 
+// Adds extra margin to fieldset at mobile
+.ecomproduct__fieldset {
+    @media @mobile { margin-bottom: 20px;}
+}
+
 // Reset legend styles
 .ecomproduct__legend {
     padding: 0 0 10px;
@@ -295,6 +300,16 @@
 }
 .tag-item:before {
     content: ',';
+}
+
+
+// Once product is added
+.form .button {
+    &.added {
+        &:before {
+            content: '\f00c'
+        }
+    }
 }
 
 
