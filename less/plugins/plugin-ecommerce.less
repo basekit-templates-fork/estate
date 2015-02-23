@@ -34,7 +34,8 @@
 .product-item-article {
     min-height: 450px;
 
-    @media @mobile {
+    @media only screen
+    and (max-width : 667px) {
         min-height: 0;
     }
 }
@@ -46,7 +47,8 @@
     margin-bottom: 2%;
 
     // Display 100% at mobile
-    @media @mobile {
+    @media only screen
+    and (max-width : 667px) {
         width: 100%;
         margin-bottom: 4%;
     }
@@ -63,7 +65,8 @@
     justify-content: center;
     background-color: @bg-color-alt;
 
-    @media @mobile {
+    @media only screen
+    and (max-width : 667px) {
         height: 200px;
     }
 }
@@ -82,7 +85,8 @@
 .product-item-title {
     text-align: center;
 
-    @media @mobile {
+    @media only screen
+    and (max-width : 667px) {
         font-size: @font-swatch5-font-size;
         line-height: bkscale(@font-swatch5-line-height,0.8);
         text-align: left;
@@ -104,7 +108,8 @@
         max-width: 50%;
     }
     // Reduces price width for mobile
-    @media @mobile {
+    @media only screen
+    and (max-width : 667px) {
         max-width: 30%;
         height: auto;
         padding: 3px 5px;
