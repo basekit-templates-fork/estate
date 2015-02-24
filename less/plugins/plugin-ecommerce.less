@@ -21,9 +21,18 @@
 
 // Product List
 .product-list {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+
     justify-content: space-between;
+    -webkit-justify-content: space-between;
 }
 
 // Product Item
@@ -440,6 +449,20 @@
 .basket-summary__cell {
     border: 1px solid @bg-color-alt;
     .rounded(@radius: 2px); // Mixin > Other Mixins: Border Radius Mixin
+}
+
+.quantity-wrap { width: 100%; }
+
+.quantity-field {
+    position: relative;
+    min-width: 30px;
+    top: 6px;
+    text-align: center;
+}
+
+.quantity-wrap .button--quantity {
+    height: 30px;
+    width: 30px;
 }
 
 
