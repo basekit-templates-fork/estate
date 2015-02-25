@@ -36,7 +36,9 @@
 		border-bottom: 0;
 		margin-right: 0;
 
-		&:hover { border-bottom: 0; }
+		&:hover {
+			border-bottom: 0;
+		}
 	}
 }
 
@@ -77,6 +79,12 @@
 	background-color: @contrast-color;
 	padding: 3px 11px;
 	width: 40%;
+
+	@media @mobile {
+		color: @paragraph-color;
+		background-color: transparent;
+		width: 100%;
+	}
 }
 
 
