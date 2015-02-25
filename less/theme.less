@@ -322,4 +322,10 @@ textarea,
 		border-color: @bg-color-alt;
 		box-shadow: none;
 	}
+
+    @media @tablet {
+        // Fix for iOS devices
+        -webkit-appearance: none;
+        -webkit-border-radius: 0;
+    }
 }
