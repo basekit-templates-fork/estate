@@ -19,10 +19,25 @@
 }
 
 .menusections-item {
-	margin-right: 40px;
 	margin-bottom: 20px;
 
-	a:hover {color: lighten(@heading-color,10%); }
+	border-bottom: 2px solid @button-color;
+	padding: 10px 20px;
+
+	&:hover { border-bottom: 2px solid lighten(@button-color,10%); }
+
+	a:hover {
+		color: lighten(@heading-color,10%);
+		text-decoration: none;
+	}
+
+	@media @mobile {
+		display: block;
+		border-bottom: 0;
+		margin-right: 0;
+
+		&:hover { border-bottom: 0; }
+	}
 }
 
 .section-header {
@@ -73,6 +88,10 @@
 	background-color: transparent;
 	padding: 40px;
 	border: 4px solid @contrast-color;
+
+	@media @mobile {
+		padding: 10px;
+	}
 }
 
 
