@@ -53,6 +53,8 @@
 // Navigation Link
 .navigation-item .item-name {
 	padding: 16px 20px;
+	overflow: hidden;
+	text-overflow: ellipsis;
 	.transition(@duration:0.2s, @ease:ease-out); // Mixin > Other Mixins: Transitions
 	&:hover {
 		color: darken(@bg-color-alt,50%);
