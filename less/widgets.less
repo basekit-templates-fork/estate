@@ -491,10 +491,16 @@ button,
 	padding: 11px 30px;
 	.rounded(@radius: 2px); // Mixin > Other Mixins: Border Radius Mixin
 	.transition(@duration:0.2s, @ease:ease-out); // Mixin > Other Mixins: Transitions
-	text-transform: uppercase;
 	&:focus {
 		outline: 0;
 	}
+}
+
+// Uppercase text for all buttons but Button Widget
+
+button:not(.buttonwidget__button),
+.button:not(.buttonwidget__button) {
+    text-transform: uppercase;
 }
 
 
