@@ -126,10 +126,34 @@
 // Product Filters
 // ---------------
 
+// Legend
 
 .product-filters  .legend {
     display: none;
 }
+
+// Form Group
+
+.ecomproductslist__fieldset--filters .ecomproductslist__form-group {
+    width: 23%;
+    @media @mobile {
+        width: 100%;
+    }
+}
+
+// Last Form Group
+
+.form-group:last-child {
+    margin-right: 0;
+}
+
+// Select
+
+.ecomproductslist__select {
+    width: 100%;
+}
+
+// Form Group, Select
 
 .ecomproductslist__form-group,
 .ecomproductslist__select {
@@ -143,7 +167,7 @@
 // Styles filters
 .fieldset--filters .ecomproductslist__form-body {
     text-align: center;
-    padding: 85px 10px 0;
+    padding: 40px 10px 0;
     width: 100%;
     margin: 0 auto;
     border-top: 2px solid @bg-color-alt;
