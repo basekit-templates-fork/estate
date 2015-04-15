@@ -12,7 +12,10 @@
 // Nokia lumia bug fix
 .extendednavigation {
 	width: 100%;
-	overflow-x: hidden;
+
+	@media @mobile {
+		overflow-x: hidden;
+	}
 }
 
 
