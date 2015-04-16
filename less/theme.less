@@ -26,6 +26,18 @@ body {
 @-o-viewport{width:device-width}
 @viewport{width:device-width}
 
+.responsivecolumns {
+    .columns-two-left, .columns-two-right {
+        width: 48.5%;
+        margin-right: 3%;
+
+        @media @mobile {
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+}
+
 
 // Page Container
 // --------------
