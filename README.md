@@ -1,4 +1,4 @@
-prism
+Estate
 =====
 
-A Basekit standard base theme
+A theme for real estate companies based on Prism
